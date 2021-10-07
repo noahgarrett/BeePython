@@ -1,27 +1,24 @@
-from setuptools import setup
+import setuptools
 
-setup(
-    name='bee',
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name='beemovie',
     version='4.2.0',
     description='A package to easy insert the Bee Movie script into any Python project.',
-    url='https://github.com/shuds13/pyexample',
-    author='Stephen Hudson',
-    author_email='shudson@anl.gov',
-    license='BSD 2-clause',
-    packages=['pyexample'],
-    install_requires=['mpi4py>=2.0',
-                      'numpy',
-                      ],
+    url='https://github.com/noahgarrett/BeePython',
+    author='Noah Garrett',
+    author_email='noah.garrett@jerboatechnologies.com',
+    license='MIT',
+    packages=setuptools.find_packages(where="src"),
+    install_requires=[],
 
     classifiers=[
-        'Development Status :: 1 - Planning',
-        'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: BSD License',
-        'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
+
+    package_dir={"": "src"},
 )
